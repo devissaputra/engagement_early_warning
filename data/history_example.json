@@ -1,0 +1,18 @@
+{
+  "prediction_cutoff": "2026-09-14",
+  "activity_events": [
+    {"occurred_on": "2026-09-02", "event_type": "resource_view"},
+    {"occurred_on": "2026-09-03", "event_type": "resource_view"},
+    {"occurred_on": "2026-09-04", "event_type": "forum_post"},
+    {"occurred_on": "2026-09-11", "event_type": "resource_view"}
+  ],
+  "tasks": [
+    {"due_on": "2026-09-08", "submitted_on": "2026-09-08"},
+    {"due_on": "2026-09-12", "submitted_on": null},
+    {"due_on": "2026-09-20", "submitted_on": null}
+  ],
+  "assessments": [
+    {"available_on": "2026-09-06", "score": 0.74},
+    {"available_on": "2026-09-16", "score": 0.92}
+  ]
+}
