@@ -2,32 +2,148 @@
 
 ## Intended use
 
-Engagement Early-Warning System is meant for research, prototyping, and educational design work. It should help people inspect a learning-related signal or decision, not make consequential decisions on their behalf.
+Engagement Early-Warning System is intended for research and supportive learner review.
 
-## Human oversight
+It is not a disciplinary system, motivation detector, psychological assessment, admissions tool, or automated decision maker.
 
-A person should be able to see what evidence produced an output, question it, and override it. If the system cannot explain a recommendation well enough for meaningful review, the recommendation should not be used in a high-stakes setting.
+## Risk is not identity
 
-## Privacy
+A probability describes a model output under a particular course, prediction date, feature definition, and outcome definition.
 
-Collect only the data the study actually needs. Remove direct identifiers, document retention periods, restrict access to raw traces, and avoid storing free text, audio, video, or other sensitive material unless it is essential to the research question.
+It does not mean a learner is:
 
-## Fairness
+- unmotivated
+- incapable
+- irresponsible
+- certain to fail
+- certain to disengage
 
-Overall accuracy can hide uneven errors. When it is lawful and ethically appropriate, inspect false alarms, missed support, calibration, and recommendation quality across relevant groups and contexts. Do not treat a single fairness metric as proof that a system is fair.
+Language shown to staff and learners should avoid turning a temporary support signal into a personal label.
 
-## Educational risk
+## Time-safe evidence
 
-A technically correct output can still lead to a poor learning experience. Watch for labels that become self-fulfilling, excessive nudging, over-support that removes productive struggle, or analytics that reward surveillance rather than learning.
+Using future information can make a system appear much better than it could be in practice.
 
-## Uses excluded from this prototype
+Feature construction should therefore preserve what was actually knowable at the prediction cutoff.
 
-- autonomous grading, admissions, or disciplinary decisions
+Examples:
+
+- future grades must not enter earlier predictions
+- tasks not yet due must not become missed-task evidence
+- future submissions must not rewrite the state that existed at the cutoff
+- data ingestion delays should be documented
+
+Leakage is both a methodological and governance problem because it can create unjustified confidence in a support system.
+
+## Engagement is context dependent
+
+Low LMS activity is not equivalent to disengagement.
+
+A learner may be working:
+
+- offline
+- in another platform
+- in a group
+- through downloaded materials
+- under an accessibility accommodation
+- in a course that does not require frequent LMS use
+
+Forum participation is especially context dependent and should not be treated as a universal sign of engagement.
+
+## False alarms
+
+A false-positive alert can create:
+
+- unwanted contact
+- stigma
+- surveillance concerns
+- unnecessary workload
+- a self-fulfilling expectation of failure
+
+Human reviewers should see why a case was selected and have enough context to dismiss an inappropriate alert.
+
+## Missed support
+
+False negatives matter too.
+
+A system that looks precise because it flags only obvious cases may miss learners who would benefit from support.
+
+Evaluation should therefore report recall and false-negative burden at the actual review capacity.
+
+## Review capacity
+
+The operational threshold should reflect the support team's realistic capacity.
+
+If a system flags more learners than staff can meaningfully review, a nominally high-sensitivity model may not create useful support.
+
+The repository uses a review-budget queue rather than pretending that one universal probability threshold fits every deployment.
+
+## Alert fatigue
+
+Repeated alerts for the same learner can overwhelm staff and create intrusive support experiences.
+
+The baseline includes a simple cooldown.
+
+A real system needs escalation rules, case closure, review outcomes, and a way to override cooldown when circumstances materially change.
+
+## Privacy and data minimization
+
+Early-warning systems can accumulate detailed behavioral traces.
+
+Collect only the data needed for the support question.
+
+Avoid collecting or storing sensitive free text, private messages, health information, disability information, or unrelated browsing data simply because they might improve prediction.
+
+Define:
+
+- data access
+- retention
+- deletion
+- correction
+- permitted uses
+- whether instructors can see raw traces
+- whether data can be reused for grading or discipline
+
+## Fairness and subgroup diagnostics
+
+Overall metrics can hide uneven false alarms, missed support, or miscalibration.
+
+Where lawful and ethically justified, evaluate descriptive error and calibration patterns across relevant groups and contexts.
+
+Do not treat one parity statistic as proof that the system is fair.
+
+Small groups also create privacy and statistical-stability concerns.
+
+## Sensitive attributes
+
+Sensitive attributes should not be added merely to improve prediction.
+
+When such attributes are used for fairness auditing, access and reporting should be tightly controlled and justified by the audit purpose.
+
+## Intervention effects
+
+Once support is delivered, later behavior may change because of the intervention.
+
+That creates a feedback loop.
+
+Future labels and retraining datasets should distinguish natural course progression from outcomes affected by prior alerts and support.
+
+## Excluded uses
+
+Do not use this prototype alone for:
+
+- autonomous grading
+- admissions
+- discipline
+- academic-integrity enforcement
+- scholarship removal
 - employment decisions
 - psychological or medical diagnosis
-- covert monitoring or surveillance
-- any deployment where affected people cannot understand or challenge the output
+- covert surveillance
+- ranking learners by worth or motivation
 
-## Before a real-user study or deployment
+## Before real deployment
 
-Document consent or another lawful basis, data governance, access controls, subgroup evaluation, calibration where probabilities are used, human escalation paths, and clear rollback criteria.
+Document the outcome definition, prediction cutoffs, feature windows, data delays, model-development period, temporal holdout, calibration, review capacity, intervention protocol, alert cooldown, privacy controls, subgroup evaluation, correction/appeal path, and clear rollback criteria.
+
+Affected learners should have meaningful information about how support analytics are used in their learning environment.
