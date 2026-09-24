@@ -1,17 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
-<title id="title">Engagement Early-Warning System demo snapshot</title>
-<desc id="desc">Example values produced by the synthetic demo included in this repository.</desc>
-<rect width="1200" height="280" rx="24" fill="#111827"/>
-<text x="52" y="48" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#f9fafb">Demo snapshot</text>
-<text x="52" y="76" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#aeb8c5">Output from the bundled synthetic example. These are not research results.</text>
-<rect x="52.0" y="112" width="353.3" height="108" rx="14" fill="#1f2937" stroke="#46556a"/>
-<text x="70.0" y="142" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#93c5fd">Low-risk example</text>
-<text x="70.0" y="172" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#f3f4f6">0.056</text>
-<rect x="423.3" y="112" width="353.3" height="108" rx="14" fill="#1f2937" stroke="#46556a"/>
-<text x="441.3" y="142" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#93c5fd">Higher-risk example</text>
-<text x="441.3" y="172" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#f3f4f6">0.735</text>
-<rect x="794.7" y="112" width="353.3" height="108" rx="14" fill="#1f2937" stroke="#46556a"/>
-<text x="812.7" y="142" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#93c5fd">Calibration</text>
-<text x="812.7" y="172" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#f3f4f6">Reported by probability bin</text>
-<text x="52" y="252" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8995a5">Run: python scripts/run_demo.py</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+<title id="title">Engagement Early-Warning System synthetic demo</title>
+<desc id="desc">The demo contains 24 synthetic prediction cases across two prediction dates and demonstrates cutoff-safe feature construction, review-budget evaluation, calibration, lead time, subgroup diagnostics, and temporal holdout.</desc>
+<rect width="1200" height="350" rx="24" fill="#111827"/>
+<text x="52" y="48" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#f9fafb">Synthetic time-safe early-warning demo</text>
+<text x="52" y="76" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#aeb8c5">24 synthetic prediction cases · two cutoff dates · no real learner data.</text>
+
+<rect x="52" y="112" width="250" height="112" rx="14" fill="#1f2937" stroke="#46556a"/>
+<text x="70" y="142" font-family="Arial" font-size="13" font-weight="600" fill="#93c5fd">Leakage guard</text>
+<text x="70" y="172" font-family="Arial" font-size="16" font-weight="600" fill="#f3f4f6">future evidence excluded</text>
+<text x="70" y="197" font-family="Arial" font-size="13" fill="#cbd5e1">due dates + score availability</text>
+
+<rect x="320" y="112" width="250" height="112" rx="14" fill="#1f2937" stroke="#46556a"/>
+<text x="338" y="142" font-family="Arial" font-size="13" font-weight="600" fill="#93c5fd">Review capacity</text>
+<text x="338" y="172" font-family="Arial" font-size="16" font-weight="600" fill="#f3f4f6">top 6 cases reviewed</text>
+<text x="338" y="197" font-family="Arial" font-size="13" fill="#cbd5e1">operational threshold reported</text>
+
+<rect x="588" y="112" width="250" height="112" rx="14" fill="#1f2937" stroke="#46556a"/>
+<text x="606" y="142" font-family="Arial" font-size="13" font-weight="600" fill="#93c5fd">Probability review</text>
+<text x="606" y="172" font-family="Arial" font-size="16" font-weight="600" fill="#f3f4f6">Brier · ECE · bins</text>
+<text x="606" y="197" font-family="Arial" font-size="13" fill="#cbd5e1">synthetic diagnostics only</text>
+
+<rect x="856" y="112" width="292" height="112" rx="14" fill="#1f2937" stroke="#46556a"/>
+<text x="874" y="142" font-family="Arial" font-size="13" font-weight="600" fill="#93c5fd">Support evaluation</text>
+<text x="874" y="172" font-family="Arial" font-size="16" font-weight="600" fill="#f3f4f6">precision · recall · lead time</text>
+<text x="874" y="197" font-family="Arial" font-size="13" fill="#cbd5e1">subgroups + temporal holdout</text>
+
+<text x="52" y="270" font-family="Arial" font-size="14" fill="#d1d5db">The raw-history example also proves that a future assessment score is unavailable at the earlier cutoff.</text>
+<text x="52" y="299" font-family="Arial" font-size="14" fill="#d1d5db">All coefficients, groups, outcomes, and metrics are synthetic demonstrations, not empirical model-performance claims.</text>
+<text x="52" y="326" font-family="Arial" font-size="13" fill="#8995a5">Run: python scripts/run_demo.py</text>
 </svg>
