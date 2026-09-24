@@ -1,7 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+<title id="title">Engagement Early-Warning System time-safe data flow</title>
+<desc id="desc">Past events and due dates on or before a prediction cutoff form features, while later events belong only to the future outcome window. Risk predictions are evaluated for calibration, review-budget performance, lead time, subgroup diagnostics, and repeat-alert controls.</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52656D"/></marker></defs>
 <rect width="100%" height="100%" fill="#FAFBFA"/>
-<text x="60" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2430">Engagement Early-Warning System · data and reasoning flow</text>
-<text x="60" y="98" font-family="Arial, sans-serif" font-size="17" fill="#5B6660">A compact view of the information path used by the prototype.</text>
-<rect x="95" y="145" width="200" height="110" rx="18" fill="#E8F1F3" stroke="#87949A" stroke-width="2"/><text x="195" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">01</text><text x="195" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#26343B">LMS activity</text><line x1="300" y1="200" x2="350" y2="200" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/><rect x="365" y="145" width="200" height="110" rx="18" fill="#EEF3E8" stroke="#87949A" stroke-width="2"/><text x="465" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">02</text><text x="465" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#26343B">Risk features</text><line x1="570" y1="200" x2="620" y2="200" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/><rect x="635" y="145" width="200" height="110" rx="18" fill="#F5EDE4" stroke="#87949A" stroke-width="2"/><text x="735" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">03</text><text x="735" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#26343B">Calibrated model</text><line x1="840" y1="200" x2="890" y2="200" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/><rect x="905" y="145" width="200" height="110" rx="18" fill="#ECE8F5" stroke="#87949A" stroke-width="2"/><text x="1005" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">04</text><text x="1005" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#26343B">Human review</text>
+<text x="60" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2430">Engagement Early-Warning System · time-safe data flow</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="17" fill="#5B6660">Information available after the cutoff cannot be used to predict what happens after the cutoff.</text>
+
+<rect x="55" y="145" width="240" height="135" rx="18" fill="#E8F1F3" stroke="#87949A" stroke-width="2"/>
+<text x="175" y="180" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Past evidence</text>
+<text x="175" y="207" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">activity dates · due dates</text>
+<text x="175" y="228" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">submissions · available scores</text>
+<text x="175" y="251" text-anchor="middle" font-family="Arial" font-size="13" fill="#5B6660">on or before cutoff</text>
+
+<line x1="300" y1="212" x2="350" y2="212" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="365" y="145" width="230" height="135" rx="18" fill="#EEF3E8" stroke="#87949A" stroke-width="2"/>
+<text x="480" y="180" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Time-safe features</text>
+<text x="480" y="207" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">inactivity · overdue rate</text>
+<text x="480" y="228" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">activity drop · recent activity</text>
+<text x="480" y="251" text-anchor="middle" font-family="Arial" font-size="13" fill="#5B6660">latest score available by cutoff</text>
+
+<line x1="600" y1="212" x2="650" y2="212" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="665" y="145" width="220" height="135" rx="18" fill="#F5EDE4" stroke="#87949A" stroke-width="2"/>
+<text x="775" y="180" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Synthetic risk</text>
+<text x="775" y="207" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">probability + contributions</text>
+<text x="775" y="228" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">no fitted calibration model</text>
+<text x="775" y="251" text-anchor="middle" font-family="Arial" font-size="13" fill="#5B6660">transparent coefficients</text>
+
+<line x1="890" y1="212" x2="940" y2="212" stroke="#52656D" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="955" y="125" width="195" height="175" rx="18" fill="#ECE8F5" stroke="#87949A" stroke-width="2"/>
+<text x="1052" y="160" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Evaluation</text>
+<text x="1052" y="188" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">Brier · ECE · bins</text>
+<text x="1052" y="209" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">precision · recall</text>
+<text x="1052" y="230" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">lead time · subgroup audit</text>
+<text x="1052" y="251" text-anchor="middle" font-family="Arial" font-size="14" fill="#26343B">review budget · cooldown</text>
+
+<line x1="175" y1="310" x2="175" y2="350" stroke="#9A5B55" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="55" y="360" width="1095" height="62" rx="16" fill="#FFF4F2" stroke="#C78F86"/>
+<text x="75" y="386" font-family="Arial" font-size="15" font-weight="700" fill="#70433F">Future outcome window</text>
+<text x="75" y="407" font-family="Arial" font-size="14" fill="#70433F">Disengagement labels and event dates occur strictly after the prediction cutoff and are used for evaluation, never feature construction.</text>
 </svg>
