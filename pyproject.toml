@@ -5,10 +5,25 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "engagement-early-warning"
 version = "0.1.0"
-description = "Interpretable disengagement risk baseline with transparent features and probability bin calibration review."
+description = "Time-safe learner engagement early-warning analytics with leakage guards, calibration review, lead-time analysis, and capacity-aware human review."
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Devis Wawan Saputra"}]
+readme = "README.md"
+keywords = [
+  "ai-in-education",
+  "learning-analytics",
+  "early-warning-system",
+  "student-success",
+  "student-support",
+  "educational-data-mining",
+  "calibration",
+  "temporal-validation",
+  "python",
+]
+
+[project.urls]
+Repository = "https://github.com/devissaputra/engagement_early_warning"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
