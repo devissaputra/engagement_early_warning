@@ -1,0 +1,3 @@
+learner,week,inactive_days,missed_tasks,forum_posts,prior_score,outcome
+L01,3,1,0,2,0.8,0
+L02,3,10,2,0,0.4,1
