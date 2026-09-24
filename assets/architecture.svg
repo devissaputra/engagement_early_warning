@@ -1,35 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-<title id="title">Engagement Early-Warning System workflow</title>
-<desc id="desc">Five-stage workflow diagram for this research prototype.</desc>
-<rect width="1200" height="300" rx="24" fill="#f7f8fa"/>
-<text x="50" y="48" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#17202a">Engagement Early-Warning System · baseline architecture</text>
-<text x="50" y="76" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#59636e">Current baseline, with each decision kept visible for review.</text>
-<rect x="50.0" y="120" width="190" height="92" rx="16" fill="#ffffff" stroke="#38598b" stroke-width="2"/>
-<circle cx="75.0" cy="145" r="14" fill="#38598b"/>
-<text x="75.0" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
-<text x="145.0" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#26323d">Weekly history</text>
-<line x1="248.0" y1="166.0" x2="269.5" y2="166.0" stroke="#8391a1" stroke-width="2"/>
-<path d="M 261.5 160.0 L 269.5 166.0 L 261.5 172.0" fill="none" stroke="#8391a1" stroke-width="2"/>
-<rect x="277.5" y="120" width="190" height="92" rx="16" fill="#ffffff" stroke="#38598b" stroke-width="2"/>
-<circle cx="302.5" cy="145" r="14" fill="#38598b"/>
-<text x="302.5" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
-<text x="372.5" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#26323d">Temporal features</text>
-<line x1="475.5" y1="166.0" x2="497.0" y2="166.0" stroke="#8391a1" stroke-width="2"/>
-<path d="M 489.0 160.0 L 497.0 166.0 L 489.0 172.0" fill="none" stroke="#8391a1" stroke-width="2"/>
-<rect x="505.0" y="120" width="190" height="92" rx="16" fill="#ffffff" stroke="#38598b" stroke-width="2"/>
-<circle cx="530.0" cy="145" r="14" fill="#38598b"/>
-<text x="530.0" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
-<text x="600.0" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#26323d">Risk estimate</text>
-<line x1="703.0" y1="166.0" x2="724.5" y2="166.0" stroke="#8391a1" stroke-width="2"/>
-<path d="M 716.5 160.0 L 724.5 166.0 L 716.5 172.0" fill="none" stroke="#8391a1" stroke-width="2"/>
-<rect x="732.5" y="120" width="190" height="92" rx="16" fill="#ffffff" stroke="#38598b" stroke-width="2"/>
-<circle cx="757.5" cy="145" r="14" fill="#38598b"/>
-<text x="757.5" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
-<text x="827.5" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#26323d">Calibration check</text>
-<line x1="930.5" y1="166.0" x2="952.0" y2="166.0" stroke="#8391a1" stroke-width="2"/>
-<path d="M 944.0 160.0 L 952.0 166.0 L 944.0 172.0" fill="none" stroke="#8391a1" stroke-width="2"/>
-<rect x="960.0" y="120" width="190" height="92" rx="16" fill="#ffffff" stroke="#38598b" stroke-width="2"/>
-<circle cx="985.0" cy="145" r="14" fill="#38598b"/>
-<text x="985.0" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">5</text>
-<text x="1055.0" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#26323d">Human outreach</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">Engagement Early-Warning System architecture</title>
+<desc id="desc">Dated learner activity is cut off at a prediction date, converted into time-safe features, scored with a transparent synthetic model, evaluated under a review budget, and sent to human support review.</desc>
+<rect width="1200" height="320" rx="24" fill="#f7f8fa"/>
+<text x="50" y="48" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#17202a">Engagement Early-Warning System · time-safe architecture</text>
+<text x="50" y="76" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#59636e">The prediction cutoff separates usable evidence from future outcome information.</text>
+
+<rect x="40" y="125" width="195" height="105" rx="16" fill="#fff" stroke="#38598b" stroke-width="2"/>
+<circle cx="65" cy="150" r="14" fill="#38598b"/><text x="65" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">1</text>
+<text x="137" y="151" text-anchor="middle" font-family="Arial" font-size="14" font-weight="600" fill="#26323d">Dated history</text>
+<text x="137" y="174" text-anchor="middle" font-family="Arial" font-size="13" fill="#59636e">activity · tasks · scores</text>
+
+<line x1="243" y1="177" x2="267" y2="177" stroke="#8391a1" stroke-width="2"/><path d="M259 171 L267 177 L259 183" fill="none" stroke="#8391a1" stroke-width="2"/>
+
+<rect x="275" y="125" width="195" height="105" rx="16" fill="#fff" stroke="#38598b" stroke-width="2"/>
+<circle cx="300" cy="150" r="14" fill="#38598b"/><text x="300" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">2</text>
+<text x="372" y="151" text-anchor="middle" font-family="Arial" font-size="14" font-weight="600" fill="#26323d">Prediction cutoff</text>
+<text x="372" y="174" text-anchor="middle" font-family="Arial" font-size="13" fill="#59636e">future data rejected</text>
+
+<line x1="478" y1="177" x2="502" y2="177" stroke="#8391a1" stroke-width="2"/><path d="M494 171 L502 177 L494 183" fill="none" stroke="#8391a1" stroke-width="2"/>
+
+<rect x="510" y="125" width="195" height="105" rx="16" fill="#fff" stroke="#38598b" stroke-width="2"/>
+<circle cx="535" cy="150" r="14" fill="#38598b"/><text x="535" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">3</text>
+<text x="607" y="151" text-anchor="middle" font-family="Arial" font-size="14" font-weight="600" fill="#26323d">Time-safe features</text>
+<text x="607" y="174" text-anchor="middle" font-family="Arial" font-size="13" fill="#59636e">transparent risk score</text>
+
+<line x1="713" y1="177" x2="737" y2="177" stroke="#8391a1" stroke-width="2"/><path d="M729 171 L737 177 L729 183" fill="none" stroke="#8391a1" stroke-width="2"/>
+
+<rect x="745" y="125" width="195" height="105" rx="16" fill="#fff" stroke="#38598b" stroke-width="2"/>
+<circle cx="770" cy="150" r="14" fill="#38598b"/><text x="770" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">4</text>
+<text x="842" y="151" text-anchor="middle" font-family="Arial" font-size="14" font-weight="600" fill="#26323d">Review budget</text>
+<text x="842" y="174" text-anchor="middle" font-family="Arial" font-size="13" fill="#59636e">calibration · lead time</text>
+
+<line x1="948" y1="177" x2="972" y2="177" stroke="#8391a1" stroke-width="2"/><path d="M964 171 L972 177 L964 183" fill="none" stroke="#8391a1" stroke-width="2"/>
+
+<rect x="980" y="125" width="180" height="105" rx="16" fill="#fff" stroke="#38598b" stroke-width="2"/>
+<circle cx="1005" cy="150" r="14" fill="#38598b"/><text x="1005" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">5</text>
+<text x="1070" y="151" text-anchor="middle" font-family="Arial" font-size="14" font-weight="600" fill="#26323d">Human support</text>
+<text x="1070" y="174" text-anchor="middle" font-family="Arial" font-size="13" fill="#59636e">review · subgroup audit</text>
+
+<text x="50" y="276" font-family="Arial" font-size="13" fill="#59636e">Synthetic coefficients are visible and explainable; the repository does not claim empirical predictive validity.</text>
 </svg>
