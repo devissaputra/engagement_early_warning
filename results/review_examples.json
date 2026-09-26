@@ -1,0 +1,8 @@
+{
+  "kind": "illustrative_calculation",
+  "note": "Illustrative risk and probability-loss arithmetic.",
+  "outputs": {
+    "sigmoid of zero": 0.5,
+    "Brier: predictions .8,.3; outcomes 1,0": 0.06499999999999999
+  }
+}

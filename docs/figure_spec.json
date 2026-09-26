@@ -1,0 +1,30 @@
+{
+  "question": "What support signal was available at the prediction date?",
+  "data": "Synthetic dated activity, task and assessment histories with future outcome windows.",
+  "method": "Build cutoff-safe features; apply explicit synthetic coefficients; evaluate review capacity, lead time, calibration and subgroup diagnostics.",
+  "formula": "Risk = 1/(1+exp(-z)); z = intercept + sum(coefficient×available feature).",
+  "interpretation": "The coefficients are authored, not fitted. A probability-shaped score is not necessarily calibrated. Review-budget performance and future outcome windows must remain separate from feature construction.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/review_examples.json",
+  "rows": [
+    {
+      "label": "sigmoid of zero",
+      "path": [
+        "outputs",
+        "sigmoid of zero"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "Brier: predictions .8,.3; outcomes 1,0",
+      "path": [
+        "outputs",
+        "Brier: predictions .8,.3; outcomes 1,0"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Worked example — illustrative, not a measured research result",
+  "evidence_note": "Illustrative inputs and calculations are in scripts/review_examples.py.",
+  "finding": "This early-warning prototype enforces a time boundary between evidence available at prediction and outcomes observed later. It exposes synthetic risk coefficients and evaluates a capacity-limited review queue alongside calibration and subgroup diagnostics. The code demonstrates leakage guards and support-oriented reporting, while explicitly withholding claims of predictive validity for real learners."
+}

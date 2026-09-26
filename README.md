@@ -1,14 +1,29 @@
 # Engagement Early-Warning System
 
+This early-warning prototype enforces a time boundary between evidence available at prediction and outcomes observed later. It exposes synthetic risk coefficients and evaluates a capacity-limited review queue alongside calibration and subgroup diagnostics. The code demonstrates leakage guards and support-oriented reporting, while explicitly withholding claims of predictive validity for real learners.
+
+## Start here
+
+- [Calculations, evidence and verification scope](CALCULATIONS.md)
+- [Figure sources and exact numerical paths](docs/figure_spec.json)
+- [Data status](data/README.md)
+
+![Study question, data, design and interpretation](assets/review_overview.svg)
+
+![Defined calculation and source-linked evidence](assets/review_calculations.svg)
+
+**Review scope:** 29 existing unittest checks passed. The bundled demonstration executed successfully in this review.
+
+## Detailed project documentation
+
 > Time-safe learner engagement early-warning analytics with leakage guards, calibration review, review-capacity thresholds, lead-time analysis, and subgroup diagnostics.
 
 [![CI](https://github.com/devissaputra/engagement_early_warning/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/engagement_early_warning/actions/workflows/ci.yml)
 
-![Engagement Early-Warning System architecture](assets/architecture.svg)
 
 **Area:** AI in Education · Learning Analytics · Student Support  
 **Status:** working research prototype  
-**Author:** Devis Wawan Saputra
+**Author:** Devis Saputra
 
 ## What this project is for
 
@@ -28,7 +43,6 @@ This repository does **not** establish predictive validity for real learners.
 
 **Future information cannot become a feature.**
 
-![Engagement Early-Warning System data flow](assets/data_flow.svg)
 
 A prediction case separates:
 
@@ -199,7 +213,6 @@ For a real fitted model, all fitting, tuning, and probability calibration should
 
 ## Synthetic demo
 
-![Engagement Early-Warning System synthetic demo](assets/demo_snapshot.svg)
 
 The bundled demonstration contains:
 
@@ -283,7 +296,6 @@ Explains the synthetic probability using the components actually used by the sco
 
 ## Evaluation checklist
 
-![Engagement Early-Warning System evaluation checklist](assets/evaluation_dashboard.svg)
 
 Before claiming a useful early-warning system, investigate:
 

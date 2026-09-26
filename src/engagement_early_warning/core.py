@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# Risk = 1/(1+exp(-z)); z = intercept + sum(coefficient×available feature).
+# The coefficients are authored, not fitted. A probability-shaped score is not necessarily calibrated. Review-budget performance and future outcome windows must remain separate from feature construction.
+
 import math
 from collections import defaultdict
 from collections.abc import Mapping, Sequence
